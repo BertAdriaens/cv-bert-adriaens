@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Francois+One');
+
+* {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+body {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 16px;
+	line-height: 26px;
+	color: #373737;
+}
+
+/* FONTS */
+
+h1 {
+	font-family: 'Francois+One', sans-serif;
+	font-size: 5em; /*60/16*/
+	text-transform: uppercase;
+	margin: 0;
+}
+
+
+
+h2 {
+	font-family: 'Lato', sans-serif;
+	font-size: 1.125em; /*18/16*/
+	text-transform: uppercase;
+	color: #e6cfa0;
+	margin: 0;
+	letter-spacing: 0.1em;
+}
+
+strong {
+	font-weight: 700;
+}
+/* CLEARFIX*/
+
+.section {
+	width: 100%;
+}
+
+.cf:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* NAVIGATION */
+
+header.mobile-version {
+	display: none;
+	z-index: 1000;
+	width: 100%;
+}
+
+header.sticky {
+	display: block;
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+
+header .nav-header.mobile-version {
+	position: absolute;
+	height: 75px;
+	width: 100%;
+	left: 0;
+	-webkit-transition: left .3s;
+	-o-transition: left .3s;
+	transition: left .3s;
+}
+
+header .menu {
+	background-color: red;
+	width: 75px;
+	height: 75px;
+	display: block;
+}
+
+header.active .nav-header.mobile-version {
+	left: 250px;
+}
+
+header.active nav.mobile-nav {
+	left: 0;
+}
+
+header  nav.mobile-nav {
+	background-color: yellow;
+	position: absolute;
+	left: -250px;
+	-webkit-transition: left .3s;
+	-o-transition: left .3s;
+	transition: left .3s;
+	width: 250px;
+	height: 100vh;
+}
+
+header nav ul {
+	padding: 2em;
+}
+
+header nav ul li a {
+	display: block;
+	font-family: 'Work Sans', sans-serif;
+	padding-bottom: 1.3em;
+	font-size: 1.3em;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #e4DBCD;
+	font-weight: 600;
+}
+
+header nav ul li a:hover,
+header nav ul li a:active {
+	color: #e6cfa0;
+}
+
+.section.about-me,
+.section.skills,
+.section.experience {
+	background-color: #ececec;
+}
+/* HOME */
+.section .profile-pic-bg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -150px 0 0 -150px;
+	background-color: #e6cfa0;
+	border-radius: 0% 50% 50% 50%;
+	height: 300px;
+	width: 300px;
+}
+
+.section .profile-pic-bg .profile-pic {
+	position: absolute;
+	bottom: 0;
+	width: 300px;
+}
+
+.section {
+	padding: 1em; /* 16px */
+	position: relative;
+}
+
+/* ABOUT ME */
+
+/* PERSONALIA SECTION */
+.section.personalia .info {
+	margin-bottom: 1em; /* 16px */
+}
+
+.section.personalia .info span {
+	display: block;
+}
+
+.section.personalia .info span.info-title {
+	font-weight: 700;
+}
+
+/* SKILLS SECTION */
+.section.skills .skill > div {
+	float: left;
+}
+
+.section.skills .skill {
+	padding: 0.5em 0;
+}
+
+.section.skills .skill-bar-title {
+	width: 30%;
+}
+
+.section.skills .skill-bar {
+	width: 65%;
+	height: 0.5em; /* 8/16px*/
+	position: relative;
+	background: #cecece;
+	border-radius: 10px;
+	box-shadow: inset 0 -1px -1px rgba(255,255,255,0.3);
+	margin-top: 0.5625em; /* (height.skill - height.skill-bar / 2 ) 16 */
+}
+
+.section.skills .skill-bar > span {
+	display: block;
+	height: 100%;
+	background-color: #e6cfa0;
+	position: relative;
+	overflow: hidden;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	width: 0px;
+}
+
+
+/* EDUCATION SECTION */
+.section.experience .collapsible-header,
+.section.education .collapsible-header {
+	font-weight: 700;
+}
+
+.section.education span.edu-year {
+	display: inline-block;
+	background-color: #e4DBCD;
+	padding: 0.25em 1em; /* 4/16px 16px*/
+	margin-right: 1em; /* 16px */
+}
+
+.section.education span.edu-title {
+	border-bottom: 2px solid #e4dbcd;
+	padding: 0.25em 0;
+}
+
+.section.experience .accordion div,
+.section.education .accordion div {
+	padding: 1em 0; /* 16px */
+}
+
+/* EXPERIENCE SECTION */
+.section.experience span.exp-year {
+	display: inline-block;
+	background-color: #e6cfa0;
+	padding: 0.25em 1em; /* 4/16px 16px*/
+	margin-right: 1em; /* 16px */
+}
+
+.section.experience span.exp-title {
+	border-bottom: 2px solid #e6cfa0;
+	padding: 0.25em 0;
+}
+
+/* MOBILE FIRST */
+.bt-mobile {
+	display: none;
+}
+
+/* > WIDTH 760px*/
+@media (min-width: 760px) {
+.mobile-version {
+	display: none;
+}
+
+	.wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		width: 90%;
+		margin: 0 auto;
+	}
+	.section.about-me {
+		background-color: #fff;
+	}
+
+	h2 {
+		margin: 15px 0px;
+	}
+
+	.section.about-me,
+	.section.personalia {
+		flex: 1;
+		align-items: center;
+		justify-content: center;
+		width: 50%;
+		float: left;
+		padding: 3em;
+	}
+
+	/* HEADER */
+	header nav.big-nav {
+		background-color: #fff;
+		position: relative;
+		left: unset;
+		width: 100%;
+		height: unset;
+	}
+
+	header nav.big-nav li {
+		text-align: center;
+		display: inline-block;
+		width: 19%;
+		line-height: 26px;
+		height: 26px;
+	}
+
+	header.big-version.sticky-top {
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: unset;
+	}
+
+	header .nav-header.mobile-version {
+		display: none;
+	}
+
+	header.big-version {
+		display: none;
+	}
+
+	.my-name {
+		height: 100px;
+		width: 400px;
+		text-align: right;
+		position: absolute;
+		top: 150px;
+		left: -250px;
+		transform: rotate(-90deg);
+	}
+
+	.my-name h1 {
+		font-size: 3.5em;
+		color: #e4DBCD;
+		margin-bottom: 0.5em;
+	}
+
+	.section.about-me {
+		padding: 3em;
+	}
+
+	.section .profile-pic-bg {
+		height: 400px;
+		width: 400px;
+		margin: -200px 50px 0 -200px;
+	}
+
+	.section .profile-pic-bg .profile-pic {
+		width: 400px;
+	}
+
+	.bt-mobile {
+		display: block;
+	}
+
+	/* TABLS */
+	.section.experience ul.tabs li {
+		display: block;
+		float: left;
+		width: 25%;
+		padding: 0.5em;
+		background-color: #e4DBCD;
+		margin-bottom: 0.5em;
+	}
+
+	.section.experience ul.tabs li .indicator {
+		background-color: #e6cfa0;
+	}
+
+	.section.experience ul.tabs li a {
+		text-decoration: none;
+		color: #000;
+		font-weight: 500;
+	}
+
+	.tab-content {
+		padding: 0.5em;
+		border-right: 1px solid #e4DBCD;
+		border-bottom: 1px solid #e4DBCD;
+		border-left: 1px solid #e4DBCD;
+	}
+
+	.tab-content > span {
+		padding-top: 0.5em;
+	}
+
+	.section.experience ul.tabs li:nth-child(4) {
+	border-right: 1px solid #e4DBCD;
+	}
+
+	.section.experience ul.tabs li.indicator {
+	display: none;
+	}
+}
+
+@media (min-width: 1100px) {
+	.section.about-me,
+	.section.personalia,
+	.section.skills {
+		width: 33%;
+	}
+
+	.section.personalia {
+		border-bottom: 1px solid #ececec;
+		border-top: 1px solid #ececec;
+	}
+
+	.section.education {
+		width: 33%;
+				padding: 3em;
+	}
+
+	.section.experience {
+		width: 66%;
+				padding: 3em;
+	}
+}
